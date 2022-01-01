@@ -1,0 +1,22 @@
+{
+  "name": "projet_n03_openclassrooms",
+  "version": "1.0.0",
+  "description": "Ohmyfood! est une entreprise de commande de repas en ligne. Notre concept permet aux utilisateurs de composer leur propre menu et réduire leur temps d’attente dans les restaurants",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AdnanElg/Projet_n-3_openclassrooms.git"
+  },
+  "author": "El Ghalbzouri Adnan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AdnanElg/Projet_n-3_openclassrooms/issues"
+  },
+  "homepage": "https://github.com/AdnanElg/Projet_n-3_openclassrooms#readme",
+  "devDependencies": {
+    "sass": "^1.45.2"
+  }
+}

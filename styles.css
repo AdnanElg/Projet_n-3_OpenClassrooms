@@ -86,7 +86,7 @@
     cursor: pointer;
     padding: 10px 20px;
     border: none;
-    box-shadow: 0.25px 0.25px 10px;
+    box-shadow: 2px 1px 10px -3px #000;
     margin-bottom: 25px;
     margin-top: 15px;
     transition: 200ms;
