@@ -15,8 +15,7 @@
   box-shadow: 0px 1px 2px 0px grey;
   padding: 20px;
 }
-
-.navbar__title {
+.navbar__Ohmyfood h1 {
   font-family: "Shrikhand", cursive;
   font-weight: bold;
   color: black;
@@ -28,8 +27,7 @@
 .Section1__Conteneur {
   background-color: #fafafa;
 }
-
-.section1_Map {
+.Section1__Conteneur .section1_Map {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -78,10 +76,34 @@
   margin-top: 15px;
   transition: 200ms;
 }
-
 .section1__btn:hover {
   transform: scale(1.02);
   opacity: 0.9;
+}
+
+/*Section2 Filtres*/
+.section2__fonctionnement {
+  margin-left: 40px;
+  margin-top: 30px;
+  font-size: 18px;
+  margin-bottom: 30px;
+  font-weight: bold;
+  color: #000;
+}
+
+.section2__puces {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-left: 50px;
+  gap: 40px;
+}
+.section2__puces .puces {
+  background-color: #f6f6f6;
+  padding: 20px 93px;
+  font-size: 20px;
+  border-radius: 20px;
+  box-shadow: 3px 2px 5px grey;
 }
 
 /*# sourceMappingURL=styles.css.map */

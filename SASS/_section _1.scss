@@ -1,0 +1,80 @@
+
+/*Section1.scss*/
+
+/*Icone MAP*/
+
+.Section1__Conteneur{
+    background-color: #fafafa;
+    
+    .section1_Map{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 700;
+        color: #000;
+        font-size: 20px;
+        gap: 20px;
+        padding: 20px;
+        background-color: #f3f3f3;
+    }
+}
+
+
+
+/*Section btn explorer*/
+
+
+.section1__explorer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+    
+.section1__sous-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #000;
+    margin-top: 30px;
+    text-align: center;
+        
+}
+
+    
+.section1__textes{
+    font-weight: 300;
+    color: #000;
+    font-size: 17px;
+    margin-top: 25px;
+
+}
+   
+
+
+
+
+.section1__btn{
+    font-size: 18px;
+    font-weight: 500;
+    color: #f3f3f3;
+    background-image: linear-gradient(#9356DC, #FF79DA);
+    border-radius: 30px;
+    cursor: pointer;
+    padding: 10px 20px;
+    border: none;
+    box-shadow: 2px 1px 10px -3px #000;
+    margin-bottom: 25px;
+    margin-top: 15px;
+    transition: 200ms;
+
+
+  
+    &:hover {
+        transform: scale(1.02);
+        opacity: 0.9;
+    
+    }
+
+}
