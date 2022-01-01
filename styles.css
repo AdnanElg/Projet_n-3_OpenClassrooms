@@ -1,0 +1,102 @@
+/*Base.scss*/
+
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@500;600;800&family=Raleway&family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@500;600;800&family=Raleway&family=Roboto:wght@300;400;500&family=Shrikhand&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  font-family: "Roboto", sans-serif;
+}
+
+/*Header.scss*/
+
+.navbar__Ohmyfood{
+    position: relative;
+    text-align: center;
+    box-shadow: 0px 1px 2px 0px grey;
+    padding: 20px;
+}
+
+    
+.navbar__title{
+    font-family:"Shrikhand", cursive;
+    font-weight: bold;
+    color: black;
+    font-size: 35px;
+}
+
+/*Section1.scss*/
+
+/*Icone MAP*/
+
+.Section1__Conteneur{
+    background-color: #fafafa;
+}
+
+.section1_Map{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    color: #000;
+    font-size: 20px;
+    gap: 20px;
+    padding: 20px;
+    background-color: #f3f3f3;
+}
+
+
+/*Section btn explorer*/
+
+.section1__explorer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+  
+
+  
+.section1__sous-title{
+    font-size: 24px;
+    font-weight: 600;
+    color: #000;
+    margin-top: 30px;
+    text-align: center;
+}
+  
+
+.section1__textes{
+    font-weight: 300;
+    color: #000;
+    font-size: 17px;
+    margin-top: 25px;
+}
+  
+
+
+.section1__btn{
+    font-size: 18px;
+    font-weight: 500;
+    color: #f3f3f3;
+    background-image: linear-gradient(#9356DC, #FF79DA);
+    border-radius: 30px;
+    cursor: pointer;
+    padding: 10px 20px;
+    border: none;
+    box-shadow: 0.25px 0.25px 10px;
+    margin-bottom: 25px;
+    margin-top: 15px;
+    transition: 200ms;
+
+}
+  
+.section1__btn:hover {
+    transform: scale(1.02);
+    opacity: 0.9;
+}
+  
+  
+
