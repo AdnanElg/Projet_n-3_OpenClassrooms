@@ -16,17 +16,28 @@
 .section2__puces{
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    margin-left: 50px;
+    margin-left: 45px;
     gap: 40px;
 
     .puces {
         background-color: #f6f6f6;
-        padding: 20px 93px;
+        padding: 23px 78px;
         font-size: 20px;
         border-radius: 20px;
         box-shadow: 3px 2px 5px grey;
+        opacity: 1;
+        cursor: pointer;
+        
+        
+        .icône{
+            font-weight: 900;
+            color:#7e7e7e;
+            margin-right: 9px;       
+        
+
+        }
+
     }
 
 }
-  
+

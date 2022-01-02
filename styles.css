@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*Base.scss*/
 @import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@500;600;800&family=Raleway&family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@500;600;800&family=Raleway&family=Roboto:wght@300;400;500&family=Shrikhand&display=swap");
@@ -94,16 +95,79 @@
 .section2__puces {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
-  margin-left: 50px;
+  margin-left: 45px;
   gap: 40px;
 }
 .section2__puces .puces {
   background-color: #f6f6f6;
-  padding: 20px 93px;
+  padding: 23px 78px;
   font-size: 20px;
   border-radius: 20px;
   box-shadow: 3px 2px 5px grey;
+  opacity: 1;
+  cursor: pointer;
+}
+.section2__puces .puces .icône {
+  font-weight: 900;
+  color: #7e7e7e;
+  margin-right: 9px;
+}
+
+/*Section3 les Cards*/
+.Section3__Conteneur {
+  background-color: #f6f6f6;
+}
+
+.section3__Restaurants {
+  margin-left: 40px;
+  margin-top: 50px;
+  padding-top: 50px;
+}
+.section3__Restaurants h2 {
+  margin-bottom: 30px;
+  font-size: 25px;
+}
+
+.section3__conteneur__img {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: 15px;
+}
+
+.section3__img {
+  margin-left: 40px;
+  background-color: #fff;
+  width: 46%;
+  height: 100%;
+  border-radius: 15px;
+  margin-bottom: 30px;
+}
+
+.img {
+  object-fit: cover;
+  border-radius: 15px 15px 0 0;
+}
+
+.Section3 h3, p {
+  padding: 10px;
+}
+
+.section3_sous-title {
+  margin-left: 15px;
+  margin-top: 15px;
+}
+
+.texte {
+  margin-left: 5px;
+}
+
+.logo_nouveau {
+  background-color: #99e2d0;
+  position: absolute;
+  padding: 10px 10px;
+  color: #1b6150;
+  font-size: 20px;
+  border-radius: 5px;
 }
 
 /*# sourceMappingURL=styles.css.map */
