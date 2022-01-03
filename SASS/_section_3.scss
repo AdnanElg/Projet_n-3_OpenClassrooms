@@ -2,16 +2,16 @@
 
 .Section3__Conteneur {
     background-color: #f6f6f6;
-}
-  
-.section3__Restaurants{
-    margin-left: 40px;
-    margin-top: 50px;
-    padding-top: 50px;
 
-    & h2{
-        margin-bottom: 30px;
-        font-size: 25px;
+    .section3__Restaurants{
+        margin-left: 40px;
+        margin-top: 50px;
+        padding-top: 50px;
+
+        & h2{
+            margin-bottom: 30px;
+            font-size: 25px;
+        }
     }
 }
 
@@ -20,50 +20,52 @@
     display: flex;
     flex-wrap: wrap;
     margin-right: 15px;
-    
-}
- 
-
-.section3__img{
-    margin-left: 40px;
-    background-color: #fff;
-    width: 46%;
-    height: 100%;
-    border-radius: 15px;
-    margin-bottom: 30px;
-}
-
   
-.img {
-    object-fit: cover;
-    border-radius: 15px 15px 0 0;
+
+    
+    .section3__img {
+        margin-left: 40px;
+        background-color: #fff;
+        width: 46%;
+        height: 100%;
+        border-radius: 15px;
+        margin-bottom: 30px;
+        position: relative;
+        
+        
+    
+
+
+        .img {
+            object-fit: cover;
+            border-radius: 15px 15px 0 0;
+        
+        }
+    }
 }
 
 
-
-.Section3 h3, p {
-    padding: 10px;
-}
 
 
 .section3_sous-title{
     margin-left: 15px;
     margin-top: 15px;
+    margin-bottom: 5px;
 }
 
-  
+
 .texte{
-    margin-left: 5px;
+    margin-left: 15px;
 }
 
 
 .logo_nouveau{
     background-color: #99e2d0;
-    position: absolute;
     padding: 10px 10px;
     color: #1b6150;
-    font-size: 20px;
+    font-size: 17px;
     border-radius: 5px;
-
+    position: absolute;
+    right: 15px;
+    top: 20px;
 }
-

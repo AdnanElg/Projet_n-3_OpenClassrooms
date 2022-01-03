@@ -18,26 +18,57 @@
     flex-direction: row;
     margin-left: 45px;
     gap: 40px;
+    counter-reset: compteListe;
+    list-style-type: none;
 
+    
     .puces {
         background-color: #f6f6f6;
-        padding: 23px 78px;
+        padding: 23px 30px;
         font-size: 20px;
         border-radius: 20px;
         box-shadow: 3px 2px 5px grey;
         opacity: 1;
         cursor: pointer;
-        
-        
-        .icône{
-            font-weight: 900;
-            color:#7e7e7e;
-            margin-right: 9px;       
-        
+        transform: translate(1.02);
+        position: relative;
 
+            
+        &::before{
+            counter-increment: compteListe;
+            content: counter(compteListe) " ";
+            border-radius: 30px;
+            background: #9356dc;
+            color: white;
+            font-weight: 500;
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 7%;
+            height: 40%;
+            position: absolute;
+            margin-right: 50px;
+            left: -15px;
+
+            
+            
+            
         }
-
     }
 
 }
 
+
+.icône{
+    font-weight: 900;
+    color:#7e7e7e;
+    margin-right: 10px;
+                
+}
+
+ 
+.listes{
+    padding-right: 50px;
+    margin-right: 50px;
+}   

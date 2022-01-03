@@ -23,6 +23,7 @@
   font-size: 35px;
 }
 
+/*Les couleurs*/
 /*Section1.scss*/
 /*Icone MAP*/
 .Section1__Conteneur {
@@ -97,33 +98,59 @@
   flex-direction: row;
   margin-left: 45px;
   gap: 40px;
+  counter-reset: compteListe;
+  list-style-type: none;
 }
 .section2__puces .puces {
   background-color: #f6f6f6;
-  padding: 23px 78px;
+  padding: 23px 30px;
   font-size: 20px;
   border-radius: 20px;
   box-shadow: 3px 2px 5px grey;
   opacity: 1;
   cursor: pointer;
+  transform: translate(1.02);
+  position: relative;
 }
-.section2__puces .puces .icône {
+.section2__puces .puces::before {
+  counter-increment: compteListe;
+  content: counter(compteListe) " ";
+  border-radius: 30px;
+  background: #9356dc;
+  color: white;
+  font-weight: 500;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 7%;
+  height: 40%;
+  position: absolute;
+  margin-right: 50px;
+  left: -15px;
+}
+
+.icône {
   font-weight: 900;
   color: #7e7e7e;
-  margin-right: 9px;
+  margin-right: 10px;
+}
+
+.listes {
+  padding-right: 50px;
+  margin-right: 50px;
 }
 
 /*Section3 les Cards*/
 .Section3__Conteneur {
   background-color: #f6f6f6;
 }
-
-.section3__Restaurants {
+.Section3__Conteneur .section3__Restaurants {
   margin-left: 40px;
   margin-top: 50px;
   padding-top: 50px;
 }
-.section3__Restaurants h2 {
+.Section3__Conteneur .section3__Restaurants h2 {
   margin-bottom: 30px;
   font-size: 25px;
 }
@@ -133,41 +160,76 @@
   flex-wrap: wrap;
   margin-right: 15px;
 }
-
-.section3__img {
+.section3__conteneur__img .section3__img {
   margin-left: 40px;
   background-color: #fff;
   width: 46%;
   height: 100%;
   border-radius: 15px;
   margin-bottom: 30px;
+  position: relative;
 }
-
-.img {
+.section3__conteneur__img .section3__img .img {
   object-fit: cover;
   border-radius: 15px 15px 0 0;
-}
-
-.Section3 h3, p {
-  padding: 10px;
 }
 
 .section3_sous-title {
   margin-left: 15px;
   margin-top: 15px;
+  margin-bottom: 5px;
 }
 
 .texte {
-  margin-left: 5px;
+  margin-left: 15px;
 }
 
 .logo_nouveau {
   background-color: #99e2d0;
-  position: absolute;
   padding: 10px 10px;
   color: #1b6150;
-  font-size: 20px;
+  font-size: 17px;
   border-radius: 5px;
+  position: absolute;
+  right: 15px;
+  top: 20px;
+}
+
+/*Footer*/
+.Footer__Conteneur {
+  background-color: #353535;
+}
+.Footer__Conteneur p {
+  font-size: 16px;
+}
+
+.footer__Ohmyfood {
+  margin-left: 25px;
+}
+.footer__Ohmyfood .footer__sous-title {
+  font-size: 17px;
+  font-family: "Shrikhand", cursive;
+  font-weight: bold;
+  color: white;
+  padding-top: 15px;
+}
+
+.footer__icon_1 {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  color: white;
+  margin: 10px;
+}
+.footer__icon_1 .ColorWhyte {
+  color: white;
+}
+
+.Footer__Conteneur__textes {
+  color: white;
+}
+.Footer__Conteneur__textes p {
+  margin-left: 10px;
 }
 
 /*# sourceMappingURL=styles.css.map */
