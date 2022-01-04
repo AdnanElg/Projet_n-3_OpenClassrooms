@@ -31,6 +31,7 @@
         border-radius: 15px;
         margin-bottom: 30px;
         position: relative;
+        cursor: pointer;
         
         
     
@@ -56,6 +57,7 @@
 
 .texte{
     margin-left: 15px;
+    margin-bottom: 15px;
 }
 
 
@@ -68,4 +70,26 @@
     position: absolute;
     right: 15px;
     top: 20px;
+}
+
+.section3__conteneur__img i{
+    position: absolute;
+    font-size: 35px;
+    right: 20px;
+    top: 78%;
+    
+    
+}
+    
+.section3__conteneur__img .fas{
+    color: transparent;
+    background: linear-gradient(#9356dc,#ff79da);
+    background-clip: text;
+    -webkit-background-clip: text;
+    opacity: 0;
+
+    &:hover{
+        opacity: 1;
+        transition-duration: 0.50s;
+    }
 }

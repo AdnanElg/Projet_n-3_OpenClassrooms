@@ -9,7 +9,7 @@
   font-family: "Roboto", sans-serif;
 }
 
-/*Header.scss*/
+/*Header navbar*/
 .navbar__Ohmyfood {
   position: relative;
   text-align: center;
@@ -168,6 +168,7 @@
   border-radius: 15px;
   margin-bottom: 30px;
   position: relative;
+  cursor: pointer;
 }
 .section3__conteneur__img .section3__img .img {
   object-fit: cover;
@@ -182,6 +183,7 @@
 
 .texte {
   margin-left: 15px;
+  margin-bottom: 15px;
 }
 
 .logo_nouveau {
@@ -193,6 +195,25 @@
   position: absolute;
   right: 15px;
   top: 20px;
+}
+
+.section3__conteneur__img i {
+  position: absolute;
+  font-size: 35px;
+  right: 20px;
+  top: 78%;
+}
+
+.section3__conteneur__img .fas {
+  color: transparent;
+  background: linear-gradient(#9356dc, #ff79da);
+  background-clip: text;
+  -webkit-background-clip: text;
+  opacity: 0;
+}
+.section3__conteneur__img .fas:hover {
+  opacity: 1;
+  transition-duration: 0.5s;
 }
 
 /*Footer*/
@@ -227,6 +248,10 @@
 
 .Footer__Conteneur__textes {
   color: white;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 8px;
 }
 .Footer__Conteneur__textes p {
   margin-left: 10px;

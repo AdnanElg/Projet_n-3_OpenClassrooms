@@ -16,6 +16,7 @@
   
 .footer__Ohmyfood{
     margin-left: 25px;
+
     
     .footer__sous-title{
         font-size: 17px;
@@ -35,6 +36,7 @@
     color: white;
     margin: 10px;
     
+    
     .ColorWhyte {
         color: white;
     }
@@ -44,9 +46,15 @@
   
 .Footer__Conteneur__textes{
     color: white;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 8px;
 
     & p{
         margin-left: 10px;
+    
     }
 }
   
+
