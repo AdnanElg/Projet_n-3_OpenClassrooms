@@ -35,10 +35,14 @@
     gap: 10px;
     color: white;
     margin: 10px;
+    cursor: pointer;
+
+    &:hover p{
+        text-decoration: underline;
     
-    
-    .ColorWhyte {
-        color: white;
+        .ColorWhyte {
+            color: white;
+        }
     }
 }
 
@@ -50,9 +54,14 @@
     justify-content: flex-start;
     flex-direction: column;
     gap: 8px;
+    cursor: pointer;
 
-    & p{
+    p{
         margin-left: 10px;
+        
+        &:hover{
+            text-decoration: underline;
+        }
     
     }
 }

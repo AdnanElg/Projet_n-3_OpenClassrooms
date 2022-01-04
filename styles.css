@@ -241,8 +241,12 @@
   gap: 10px;
   color: white;
   margin: 10px;
+  cursor: pointer;
 }
-.footer__icon_1 .ColorWhyte {
+.footer__icon_1:hover p {
+  text-decoration: underline;
+}
+.footer__icon_1:hover p .ColorWhyte {
   color: white;
 }
 
@@ -252,9 +256,13 @@
   justify-content: flex-start;
   flex-direction: column;
   gap: 8px;
+  cursor: pointer;
 }
 .Footer__Conteneur__textes p {
   margin-left: 10px;
+}
+.Footer__Conteneur__textes p:hover {
+  text-decoration: underline;
 }
 
 /*# sourceMappingURL=styles.css.map */
