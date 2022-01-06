@@ -49,21 +49,6 @@
   align-items: center;
 }
 
-.section1__sous-title {
-  font-size: 24px;
-  font-weight: 600;
-  color: #000;
-  margin-top: 30px;
-  text-align: center;
-}
-
-.section1__textes {
-  font-weight: 300;
-  color: #000;
-  font-size: 17px;
-  margin-top: 25px;
-}
-
 .section1__btn {
   font-size: 18px;
   font-weight: 500;
@@ -81,6 +66,21 @@
 .section1__btn:hover {
   transform: scale(1.02);
   opacity: 0.9;
+}
+
+.section1__sous-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #000;
+  margin-top: 30px;
+  text-align: center;
+}
+
+.section1__textes {
+  font-weight: 300;
+  color: #000;
+  font-size: 17px;
+  margin-top: 25px;
 }
 
 /*Section2 Filtres*/
@@ -280,13 +280,12 @@
   color: white;
 }
 
-/*Menu n°1*/
+/*Menu styles*/
 /*Header*/
 .navbar__Ohmyfood {
   position: relative;
 }
-
-header i {
+header .navbar__Ohmyfood i {
   position: absolute;
   display: flex;
   justify-content: center;
@@ -313,16 +312,14 @@ header i {
   max-width: 95%;
   margin-left: 35px;
 }
-
-.Title_Section_1 {
+.Section1_Conteneur .Title_Section_1 {
   display: flex;
   justify-content: space-between;
   flex-direction: row;
   align-items: center;
   padding: 35px;
 }
-
-.Title_Section_1 h2 {
+.Section1_Conteneur .Title_Section_1.Title_Section_1 h2 {
   font-size: 25px;
   font-weight: bold;
   color: black;
@@ -348,21 +345,20 @@ header i {
   transition-duration: 0.5s;
 }
 
+/*Menus des Plats*/
 .Section1_a_Conteneur {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
 }
-
-.Listes_Section1 {
+.Section1_a_Conteneur .Listes_Section1 {
   display: flex;
   flex-direction: column;
   gap: 15px;
   width: 30%;
 }
-
-.menu_plats {
+.Section1_a_Conteneur .Listes_Section1 .menu_plats {
   font-size: 20px;
   font-weight: 400;
   color: black;
@@ -382,29 +378,6 @@ header i {
   font-size: 16px;
 }
 
-.section1__explorer {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.section1__btn {
-  font-size: 18px;
-  font-weight: 500;
-  color: #f3f3f3;
-  background-image: linear-gradient(#9356DC, #FF79DA);
-  border-radius: 30px;
-  cursor: pointer;
-  padding: 10px 20px;
-  border: none;
-  box-shadow: 2px 1px 10px -3px #000;
-  margin-bottom: 25px;
-  margin-top: 50px;
-  margin-bottom: 50px;
-  transition: 200ms;
-}
-
 .background_menu strong {
   display: flex;
   justify-content: flex-end;
@@ -415,6 +388,28 @@ header i {
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
+}
+
+/*Boutton Commander*/
+.section1__explorer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.section1__explorer .section1__btn {
+  font-size: 18px;
+  font-weight: 500;
+  color: #f3f3f3;
+  background-image: linear-gradient(#9356DC, #FF79DA);
+  border-radius: 30px;
+  cursor: pointer;
+  padding: 10px 20px;
+  border: none;
+  box-shadow: 2px 1px 10px -3px #000;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  transition: 200ms;
 }
 
 /*# sourceMappingURL=styles.css.map */
