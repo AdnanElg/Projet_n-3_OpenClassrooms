@@ -1,0 +1,82 @@
+@use "./utils/box-shadow";
+@use "./utils/zoom";
+@use "./utils/variables";
+
+//Section2 Filtres
+
+
+.section2__fonctionnement{
+    margin-left: 40px;
+    margin-top: variables.$margin-top+10px;
+    font-size: 18px;
+    margin-bottom: variables.$margin-bottom+10px;
+    font-weight: bold;
+    color: variables.$dark;
+    
+}
+
+
+.section2__puces{
+    display: flex;
+    flex-direction: row;
+    margin-left: 45px;
+    gap: variables.$gap+20px;
+    counter-reset: compteListe;
+    list-style-type: none;
+
+    
+    .puces {
+        background-color: variables.$white;
+        padding: 23px 30px;
+        font-size: 20px;
+        border-radius: 20px;
+        opacity: 1;
+        cursor: pointer;
+        position: relative;
+        @include box-shadow.section2_box-shadow;
+
+       
+        &.puces:hover{
+            @include zoom.Section1_zoom; 
+        }
+    }
+
+}
+        
+
+.puces::before{
+    counter-increment: compteListe;
+    content: counter(compteListe) " ";
+    border-radius: variables.$border-radius;
+    background: variables.$lavenderIndigo;
+    color: variables.$white;
+    font-weight: 500;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 7%;
+    height: 40%;
+    position: absolute;
+    margin-right: 50px;
+    left: -15px;
+
+}
+            
+
+
+
+
+
+.icône{
+    font-weight: 900;
+    color: variables.$gray;
+    margin-right: 10px;
+                
+}
+
+ 
+.listes{
+    padding-right: 50px;
+    margin-right: 50px;
+}   

@@ -1,6 +1,4 @@
 @charset "UTF-8";
-/*Les couleurs*/
-/*Base.scss*/
 @import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@500;600;800&family=Raleway&family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@500;600;800&family=Raleway&family=Roboto:wght@300;400;500&family=Shrikhand&display=swap");
 * {
@@ -10,22 +8,19 @@
   font-family: "Roboto", sans-serif;
 }
 
-/*Header navbar*/
 .navbar__Ohmyfood {
   position: relative;
   text-align: center;
-  box-shadow: 0px 1px 2px 0px grey;
   padding: 20px;
+  box-shadow: 0px 1px 4px 0px #818181;
 }
 .navbar__Ohmyfood h1 {
   font-family: "Shrikhand", cursive;
   font-weight: bold;
-  color: black;
+  color: #000;
   font-size: 35px;
 }
 
-/*Section1.scss*/
-/*Icone MAP*/
 .Section1__Conteneur {
   background-color: #fafafa;
 }
@@ -41,7 +36,6 @@
   background-color: #f3f3f3;
 }
 
-/*Section btn explorer*/
 .section1__explorer {
   display: flex;
   flex-direction: column;
@@ -52,16 +46,16 @@
 .section1__btn {
   font-size: 18px;
   font-weight: 500;
-  color: #f3f3f3;
+  color: #F6F6F6;
   background-image: linear-gradient(#9356DC, #FF79DA);
   border-radius: 30px;
   cursor: pointer;
   padding: 10px 20px;
   border: none;
-  box-shadow: 2px 1px 10px -3px #000;
-  margin-bottom: 25px;
   margin-top: 15px;
+  margin-bottom: 20px;
   transition: 200ms;
+  box-shadow: 2px 1px 7px -3px #000;
 }
 .section1__btn:hover {
   transform: scale(1.02);
@@ -83,7 +77,6 @@
   margin-top: 25px;
 }
 
-/*Section2 Filtres*/
 .section2__fonctionnement {
   margin-left: 40px;
   margin-top: 30px;
@@ -102,22 +95,25 @@
   list-style-type: none;
 }
 .section2__puces .puces {
-  background-color: #f6f6f6;
+  background-color: #F6F6F6;
   padding: 23px 30px;
   font-size: 20px;
   border-radius: 20px;
-  box-shadow: 3px 2px 5px grey;
   opacity: 1;
   cursor: pointer;
-  transform: translate(1.02);
   position: relative;
+  box-shadow: 3px 2px 5px #818181;
 }
-.section2__puces .puces::before {
+.section2__puces .puces.puces:hover {
+  transform: scale(1.02);
+}
+
+.puces::before {
   counter-increment: compteListe;
   content: counter(compteListe) " ";
   border-radius: 30px;
-  background: #9356dc;
-  color: white;
+  background: #9256dc;
+  color: #F6F6F6;
   font-weight: 500;
   font-size: 18px;
   display: flex;
@@ -132,7 +128,7 @@
 
 .icône {
   font-weight: 900;
-  color: #7e7e7e;
+  color: #818181;
   margin-right: 10px;
 }
 
@@ -141,9 +137,8 @@
   margin-right: 50px;
 }
 
-/*Section3 les Cards*/
 .Section3__Conteneur {
-  background-color: #f6f6f6;
+  background-color: #F6F6F6;
 }
 .Section3__Conteneur .section3__Restaurants {
   margin-left: 40px;
@@ -151,7 +146,7 @@
   padding-top: 50px;
 }
 .Section3__Conteneur .section3__Restaurants h2 {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   font-size: 25px;
 }
 
@@ -170,14 +165,18 @@
   position: relative;
   cursor: pointer;
 }
-.section3__conteneur__img .section3__img .img {
+.section3__conteneur__img .section3__img:hover {
+  transform: scale(1.02);
+}
+
+.img {
   object-fit: cover;
   border-radius: 15px 15px 0 0;
 }
 
 .liens {
   text-decoration: none;
-  color: black;
+  color: #000;
 }
 
 .section3_sous-title {
@@ -192,7 +191,7 @@
 }
 
 .logo_nouveau {
-  background-color: #99e2d0;
+  background-color: #99E2D0;
   padding: 10px 10px;
   color: #1b6150;
   font-size: 17px;
@@ -211,7 +210,7 @@
 
 .section3__conteneur__img .fas {
   color: transparent;
-  background: linear-gradient(#9356dc, #ff79da);
+  background: linear-gradient(#9356DC, #FF79DA);
   background-clip: text;
   -webkit-background-clip: text;
   opacity: 0;
@@ -221,35 +220,36 @@
   transition-duration: 0.5s;
 }
 
-/*Footer*/
 .Footer__Conteneur {
-  background-color: #353535;
+  background-color: #363636;
 }
 .Footer__Conteneur p {
   font-size: 16px;
 }
 
 .footer__Ohmyfood {
-  margin-left: 25px;
+  padding: 10px;
+  margin-left: 20px;
 }
 .footer__Ohmyfood .footer__sous-title {
   font-size: 17px;
   font-family: "Shrikhand", cursive;
   font-weight: bold;
-  color: white;
+  margin-left: 10px;
+  color: #fff;
   padding-top: 15px;
 }
 
 .liens {
   text-decoration: none;
-  color: black;
+  color: #000;
 }
 
 .footer__icon_1 {
   display: flex;
   flex-direction: row;
   gap: 10px;
-  color: white;
+  color: #fff;
   margin: 10px;
   cursor: pointer;
 }
@@ -257,11 +257,11 @@
   text-decoration: underline;
 }
 .footer__icon_1:hover p .ColorWhyte {
-  color: white;
+  color: #fff;
 }
 
 .Footer__Conteneur__textes {
-  color: white;
+  color: #fff;
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
@@ -277,11 +277,9 @@
 
 .liens_1 {
   text-decoration: none;
-  color: white;
+  color: #fff;
 }
 
-/*Menu styles*/
-/*Header*/
 .navbar__Ohmyfood {
   position: relative;
 }
@@ -296,16 +294,14 @@ header .navbar__Ohmyfood i {
   cursor: pointer;
 }
 
-/*Image*/
 .img_menu1 {
   width: 100%;
   height: 80vh;
   object-fit: cover;
 }
 
-/*Section 1*/
 .Section1_Conteneur {
-  background-color: #f6f6f6;
+  background-color: #F6F6F6;
   position: relative;
   margin-top: -60px;
   border-radius: 35px 35px 0 0;
@@ -322,8 +318,8 @@ header .navbar__Ohmyfood i {
 .Section1_Conteneur .Title_Section_1.Title_Section_1 h2 {
   font-size: 25px;
   font-weight: bold;
-  color: black;
-  font-family: Shrikhand, "cursive";
+  color: #000;
+  font-family: "Shrikhand", cursive;
 }
 
 .Title_Section_1 i {
@@ -335,7 +331,7 @@ header .navbar__Ohmyfood i {
 
 .Title_Section_1 .fas {
   color: transparent;
-  background: linear-gradient(#9356dc, #ff79da);
+  background: linear-gradient(#9356DC, #FF79DA);
   background-clip: text;
   -webkit-background-clip: text;
   opacity: 0;
@@ -345,7 +341,6 @@ header .navbar__Ohmyfood i {
   transition-duration: 0.5s;
 }
 
-/*Menus des Plats*/
 .Section1_a_Conteneur {
   display: flex;
   flex-direction: row;
@@ -355,15 +350,16 @@ header .navbar__Ohmyfood i {
 .Section1_a_Conteneur .Listes_Section1 {
   display: flex;
   flex-direction: column;
-  gap: 15px;
   width: 30%;
+  gap: 15px;
 }
 .Section1_a_Conteneur .Listes_Section1 .menu_plats {
   font-size: 20px;
   font-weight: 400;
-  color: black;
+  color: #000;
   border-bottom: solid 4px #99e2d0;
   width: 15%;
+  margin-bottom: 10px;
 }
 
 .background_menu {
@@ -372,9 +368,13 @@ header .navbar__Ohmyfood i {
   border-radius: 15px 15px 15px 15px;
   cursor: pointer;
   opacity: 0.9;
-  box-shadow: 0.5px 2.5px 10px lightgrey;
+  position: relative;
+  box-shadow: 0.5px 2.5px 10px #c9c9c9;
 }
-.background_menuh4 p {
+.background_menu:hover {
+  transform: scale(1.02);
+}
+.background_menu:hoverh4 p {
   font-size: 16px;
 }
 
@@ -390,26 +390,29 @@ header .navbar__Ohmyfood i {
   justify-content: space-between;
 }
 
-/*Boutton Commander*/
-.section1__explorer {
+.Menu__Commander {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.section1__explorer .section1__btn {
+.Menu__Commander .Menu__btn {
   font-size: 18px;
   font-weight: 500;
-  color: #f3f3f3;
+  color: #F6F6F6;
   background-image: linear-gradient(#9356DC, #FF79DA);
   border-radius: 30px;
   cursor: pointer;
   padding: 10px 20px;
   border: none;
-  box-shadow: 2px 1px 10px -3px #000;
   margin-top: 50px;
-  margin-bottom: 50px;
+  margin-bottom: 45px;
   transition: 200ms;
+  box-shadow: 2px 1px 7px -3px #000;
+}
+.Menu__Commander .Menu__btn:hover {
+  transform: scale(1.02);
+  opacity: 0.9;
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,64 @@
+@use "./variables";
+@use "./box-shadow";
+
+// Mixin-Btn_Explorer
+
+
+@mixin section1__explorer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;   
+}
+
+@mixin btn__explorer {
+        font-size: 18px;
+        font-weight: 500;
+        color: variables.$white;
+        background-image: linear-gradient(variables.$mediumPurple,variables.$blushPink);
+        border-radius: variables.$border-radius;
+        cursor: pointer;
+        padding: 10px 20px;
+        border: none;
+        margin-top: 15px;
+        margin-bottom: variables.$margin-bottom;
+        transition: 200ms;
+        @include box-shadow.Section1_box-shadow;
+}
+
+
+// Mixin-Btn_Commander
+
+@mixin Menu__Commander {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;   
+}
+
+
+@mixin Menu__btn {
+    font-size: 18px;
+    font-weight: 500;
+    color: variables.$white;
+    background-image: linear-gradient(variables.$mediumPurple,variables.$blushPink);
+    border-radius: variables.$border-radius;
+    cursor: pointer;
+    padding: 10px 20px;
+    border: none;
+    margin-top: variables.$margin-top+30px;
+    margin-bottom: variables.$margin-bottom+25px;
+    transition: 200ms;
+    @include box-shadow.Section1_box-shadow;
+}
+
+
+
+
+
+
+
+
+
+
+

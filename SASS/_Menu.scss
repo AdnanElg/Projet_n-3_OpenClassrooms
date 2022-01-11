@@ -1,6 +1,11 @@
-/*Menu styles*/
+@use "./utils/box-shadow";
+@use "./utils/zoom";
+@use "./utils/variables";
+@use "./utils/btn_ohmyfood";
 
-/*Header*/
+//Menu styles
+
+//Header
 
 .navbar__Ohmyfood{
     position: relative;
@@ -11,7 +16,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        font-size: 25px;
+        font-size: variables.$size+5px;
         left: 30px;
         top: 32px;
         cursor: pointer;
@@ -20,7 +25,7 @@
 }
 
 
-/*Image*/
+//Image
 
 .img_menu1{
     width: 100%;
@@ -29,29 +34,29 @@
 }
 
 
-/*Section 1*/
+//Section 1
 
 .Section1_Conteneur{
-    background-color: #f6f6f6 ;
+    background-color: variables.$white;
     position: relative;
     margin-top: -60px;
     border-radius: 35px 35px 0 0;
     max-width: 95%;
-    margin-left: 35px;
+    margin-left: variables.$margin-left+20px;
 
     .Title_Section_1{
         display: flex;
         justify-content: space-between;
         flex-direction: row;
         align-items: center;
-        padding: 35px;
+        padding: variables.$padding+15px;
 
         
         &.Title_Section_1 h2{
             font-size: 25px;
-            font-weight: bold;
-            color: black;
-            font-family: Shrikhand,"cursive";
+            font-weight: variables.$weight;
+            color: variables.$dark;
+            font-family: variables.$Shrikhand;
 
         
         }
@@ -72,7 +77,7 @@
 
 .Title_Section_1 .fas{
     color: transparent;
-    background: linear-gradient(#9356dc,#ff79da);
+    background: linear-gradient(variables.$mediumPurple,variables.$blushPink);
     background-clip: text;
     -webkit-background-clip: text;
     opacity: 0;
@@ -86,7 +91,7 @@
 }
 
 
-/*Menus des Plats*/
+//Menus des Plats
 
 
 .Section1_a_Conteneur{
@@ -100,16 +105,19 @@
     .Listes_Section1{
         display: flex;
         flex-direction: column;
-        gap: 15px;
         width: 30%;
+        gap: 15px;
+        
+    
 
         
         .menu_plats{
-            font-size: 20px;
+            font-size: variables.$size;
             font-weight: 400;
-            color: black;
+            color: variables.$dark;
             border-bottom: solid 4px #99e2d0;
             width: 15%;
+            margin-bottom: 10px;
 
 
         }
@@ -121,16 +129,22 @@
 
 
 .background_menu{
-    background-color: #fff;
+    background-color: variables.$white-light;
     padding: 20px 10px;
     border-radius: 15px 15px 15px 15px;
     cursor: pointer;
     opacity: 0.9;
-    box-shadow: 0.5px 2.5px 10px lightgrey;
+    position: relative;
+    @include box-shadow.Menu_box-shadow;
 
+    &:hover{
+        @include zoom.Section1_zoom;
+    
 
-    &h4 p{
-        font-size: 16px;
+        &h4 p{
+            font-size: 16px;
+
+        }
 
     }
 
@@ -153,31 +167,22 @@
         
 }
 
-/*Boutton Commander*/
 
-.section1__explorer{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+//Boutton Commander
 
-    .section1__btn{
-        font-size: 18px;
-        font-weight: 500;
-        color: #f3f3f3;
-        background-image: linear-gradient(#9356DC, #FF79DA);
-        border-radius: 30px;
-        cursor: pointer;
-        padding: 10px 20px;
-        border: none;
-        box-shadow: 2px 1px 10px -3px #000;
-        margin-top: 50px;
-        margin-bottom: 50px;
-        transition: 200ms;
+.Menu__Commander{
+    @include btn_ohmyfood.Menu__Commander;
+
+
+    .Menu__btn{
+        @include btn_ohmyfood.Menu__btn;
+
+        &:hover{
+            @include zoom.Section1_zoom;
+            opacity: 0.9;
+
+        }
+    
     }
 
 }
-
-
-
-

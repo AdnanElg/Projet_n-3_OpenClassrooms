@@ -1,16 +1,19 @@
-/*Section3 les Cards*/
+@use "./utils/zoom";
+@use "./utils/variables";
+
+//Section3 les Cards
 
 .Section3__Conteneur {
-    background-color: #f6f6f6;
+    background-color: variables.$white;
 
     .section3__Restaurants{
         margin-left: 40px;
-        margin-top: 50px;
+        margin-top: variables.$margin-top+30px;
         padding-top: 50px;
 
         & h2{
-            margin-bottom: 30px;
-            font-size: 25px;
+            margin-bottom: variables.$margin-bottom;
+            font-size: variables.$size+5px;
         }
     }
 }
@@ -25,50 +28,51 @@
     
     .section3__img {
         margin-left: 40px;
-        background-color: #fff;
+        background-color: variables.$white-light;
         width: 46%;
         height: 100%;
         border-radius: 15px;
         margin-bottom: 30px;
         position: relative;
         cursor: pointer;
-    
-        
-        
-    
-
-
-        .img {
-            object-fit: cover;
-            border-radius: 15px 15px 0 0;
-        
+     
+        &:hover{
+            @include zoom.Section1_zoom;           
+            
         }
     }
 }
 
+
+.img {
+    object-fit: cover;
+    border-radius: 15px 15px 0 0;        
+}
+
+
 .liens{
     text-decoration: none;
-    color: black;
+    color: variables.$dark;
 }
 
 
 .section3_sous-title{
-    margin-left: 15px;
+    margin-left: variables.$margin-left;
     margin-top: 15px;
     margin-bottom: 5px;
 }
 
 
 .texte{
-    margin-left: 15px;
+    margin-left: variables.$margin-left;
     margin-bottom: 15px;
 }
 
 
 .logo_nouveau{
-    background-color: #99e2d0;
+    background-color: variables.$morningGlory;
     padding: 10px 10px;
-    color: #1b6150;
+    color: variables.$green;
     font-size: 17px;
     border-radius: 5px;
     position: absolute;
@@ -87,7 +91,7 @@
     
 .section3__conteneur__img .fas{
     color: transparent;
-    background: linear-gradient(#9356dc,#ff79da);
+    background: linear-gradient(variables.$mediumPurple,variables.$blushPink);
     background-clip: text;
     -webkit-background-clip: text;
     opacity: 0;

@@ -1,0 +1,73 @@
+@use "./utils/zoom";
+@use "./utils/box-shadow";
+@use "./utils/variables";
+@use "./utils/btn_ohmyfood";
+
+//Section1.scss
+
+//Icone MAP
+
+.Section1__Conteneur{
+    background-color: variables.$prim;
+    
+    .section1_Map{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 700;
+        color: variables.$dark;
+        font-size: variables.$size;
+        gap: variables.$gap;
+        padding: variables.$padding;
+        background-color: variables.$prim-whyte;
+    }
+}
+
+
+
+//Section btn explorer
+
+
+.section1__explorer{
+    @include btn_ohmyfood.section1__explorer;
+    
+
+}
+
+.section1__btn{
+    @include btn_ohmyfood.btn__explorer;
+
+    &:hover{
+        @include zoom.Section1_zoom;
+        opacity: 0.9;
+
+    }
+
+}
+   
+
+
+
+    
+.section1__sous-title {
+    font-size: variables.$size+4px;
+    font-weight: 600;
+    color: variables.$dark;
+    margin-top: variables.$margin-top+10px;
+    text-align: center;
+        
+}
+
+    
+.section1__textes{
+    font-weight: 300;
+    color: variables.$dark;
+    font-size: 17px;
+    margin-top: 25px;
+
+}
+   
+
+
+
+

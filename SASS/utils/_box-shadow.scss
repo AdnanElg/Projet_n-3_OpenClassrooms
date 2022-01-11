@@ -1,0 +1,19 @@
+@use "./variables";
+
+//Mixin Box-shadow
+
+@mixin header_box-shadow {
+    box-shadow: 0px 1px 4px 0px variables.$gray;
+}
+
+@mixin Section1_box-shadow {
+    box-shadow: 2px 1px 7px -3px variables.$dark;
+}
+
+@mixin section2_box-shadow {
+    box-shadow: 3px 2px 5px variables.$gray;
+}
+
+@mixin Menu_box-shadow {
+    box-shadow: 0.5px 2.5px 10px variables.$light-grey;
+}
