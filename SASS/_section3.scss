@@ -1,5 +1,6 @@
 @use "./utils/zoom";
 @use "./utils/variables";
+@use "./utils/responsives";
 
 //Section3 les Cards
 
@@ -7,13 +8,17 @@
     background-color: variables.$white;
 
     .section3__Restaurants{
-        margin-left: 40px;
+        margin-left: 10px;
         margin-top: variables.$margin-top+30px;
         padding-top: 50px;
 
         & h2{
             margin-bottom: variables.$margin-bottom;
             font-size: variables.$size+5px;
+            
+            @include responsives.Desktop{
+                margin-left: 15px;
+            }
         }
     }
 }
@@ -21,20 +26,31 @@
 
 .section3__conteneur__img{
     display: flex;
-    flex-wrap: wrap;
-    margin-right: 15px;
-  
+    flex-direction: column;
+
+    @include responsives.Desktop{
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
 
     
     .section3__img {
-        margin-left: 40px;
+        margin-left: 15px;
         background-color: variables.$white-light;
-        width: 46%;
-        height: 100%;
+        margin-right: 15px;
         border-radius: 15px;
         margin-bottom: 30px;
         position: relative;
         cursor: pointer;
+
+        @include responsives.Desktop{
+            width: 47%;
+        }
+
+     
      
         &:hover{
             @include zoom.Section1_zoom;           
@@ -46,7 +62,18 @@
 
 .img {
     object-fit: cover;
-    border-radius: 15px 15px 0 0;        
+    border-radius: 15px 15px 0 0; 
+    width: 100%;
+    height: 40vh;  
+
+    @include responsives.tablet{
+        height: 20vh;
+    }
+
+    @include responsives.Desktop{
+        height: 30vh;
+    }
+
 }
 
 
@@ -60,6 +87,7 @@
     margin-left: variables.$margin-left;
     margin-top: 15px;
     margin-bottom: 5px;
+
 }
 
 
@@ -77,15 +105,22 @@
     border-radius: 5px;
     position: absolute;
     right: 15px;
-    top: 20px;
+    top: 7px;
 }
 
 .section3__conteneur__img i{
     position: absolute;
     font-size: 35px;
     right: 20px;
-    top: 78%;
-    
+    top: 84%;
+
+    @include responsives.tablet{
+        top:75%;
+    }
+
+    @include responsives.Desktop{
+        top: 79%;
+    }
     
 }
     

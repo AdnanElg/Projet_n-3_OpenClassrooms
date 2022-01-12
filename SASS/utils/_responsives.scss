@@ -1,0 +1,17 @@
+// Responsives Tablette et Desktop
+
+@mixin tablet {
+    @media screen and (min-width: 767px) {
+        @content;
+        
+    }
+}
+
+
+@mixin Desktop {
+    @media screen and (min-width: 1023px){
+        @content;
+
+    }
+    
+}

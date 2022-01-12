@@ -1,12 +1,13 @@
 @use "./utils/box-shadow";
 @use "./utils/zoom";
 @use "./utils/variables";
+@use "./utils/responsives";
 
 //Section2 Filtres
 
 
 .section2__fonctionnement{
-    margin-left: 40px;
+    margin-left: 25px;
     margin-top: variables.$margin-top+10px;
     font-size: 18px;
     margin-bottom: variables.$margin-bottom+10px;
@@ -18,22 +19,39 @@
 
 .section2__puces{
     display: flex;
-    flex-direction: row;
-    margin-left: 45px;
+    flex-direction: column;
+    margin-left: 35px;
+    margin-right: 10px;
     gap: variables.$gap+20px;
     counter-reset: compteListe;
     list-style-type: none;
 
+    @include responsives.tablet{
+        margin-right: 20px;
+        gap: variables.$gap+10px;
+    }
+
+    @include responsives.Desktop{
+        flex-direction: row;
+    }
+
     
     .puces {
         background-color: variables.$white;
-        padding: 23px 30px;
+        padding: 25px 25px;
         font-size: 20px;
         border-radius: 20px;
         opacity: 1;
         cursor: pointer;
         position: relative;
         @include box-shadow.section2_box-shadow;
+
+        @include responsives.Desktop{
+            width: 100%;
+        }
+
+
+        
 
        
         &.puces:hover{
@@ -55,11 +73,21 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 7%;
+    width: 9%;
     height: 40%;
     position: absolute;
     margin-right: 50px;
     left: -15px;
+
+    @include responsives.tablet{
+        width: 4%;
+    }
+
+    @include responsives.Desktop{
+        width: 7%;
+    }
+
+
 
 }
             
@@ -77,6 +105,6 @@
 
  
 .listes{
-    padding-right: 50px;
-    margin-right: 50px;
+    padding-right: 0px;
+    margin-right: 0px;
 }   

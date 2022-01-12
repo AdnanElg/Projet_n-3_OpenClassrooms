@@ -75,10 +75,11 @@
   color: #000;
   font-size: 17px;
   margin-top: 25px;
+  text-align: center;
 }
 
 .section2__fonctionnement {
-  margin-left: 40px;
+  margin-left: 25px;
   margin-top: 30px;
   font-size: 18px;
   margin-bottom: 30px;
@@ -88,21 +89,38 @@
 
 .section2__puces {
   display: flex;
-  flex-direction: row;
-  margin-left: 45px;
+  flex-direction: column;
+  margin-left: 35px;
+  margin-right: 10px;
   gap: 40px;
   counter-reset: compteListe;
   list-style-type: none;
 }
+@media screen and (min-width: 767px) {
+  .section2__puces {
+    margin-right: 20px;
+    gap: 30px;
+  }
+}
+@media screen and (min-width: 1023px) {
+  .section2__puces {
+    flex-direction: row;
+  }
+}
 .section2__puces .puces {
   background-color: #F6F6F6;
-  padding: 23px 30px;
+  padding: 25px 25px;
   font-size: 20px;
   border-radius: 20px;
   opacity: 1;
   cursor: pointer;
   position: relative;
   box-shadow: 3px 2px 5px #818181;
+}
+@media screen and (min-width: 1023px) {
+  .section2__puces .puces {
+    width: 100%;
+  }
 }
 .section2__puces .puces.puces:hover {
   transform: scale(1.02);
@@ -119,11 +137,21 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 7%;
+  width: 9%;
   height: 40%;
   position: absolute;
   margin-right: 50px;
   left: -15px;
+}
+@media screen and (min-width: 767px) {
+  .puces::before {
+    width: 4%;
+  }
+}
+@media screen and (min-width: 1023px) {
+  .puces::before {
+    width: 7%;
+  }
 }
 
 .icône {
@@ -133,15 +161,15 @@
 }
 
 .listes {
-  padding-right: 50px;
-  margin-right: 50px;
+  padding-right: 0px;
+  margin-right: 0px;
 }
 
 .Section3__Conteneur {
   background-color: #F6F6F6;
 }
 .Section3__Conteneur .section3__Restaurants {
-  margin-left: 40px;
+  margin-left: 10px;
   margin-top: 50px;
   padding-top: 50px;
 }
@@ -149,21 +177,37 @@
   margin-bottom: 20px;
   font-size: 25px;
 }
+@media screen and (min-width: 1023px) {
+  .Section3__Conteneur .section3__Restaurants h2 {
+    margin-left: 15px;
+  }
+}
 
 .section3__conteneur__img {
   display: flex;
-  flex-wrap: wrap;
-  margin-right: 15px;
+  flex-direction: column;
+}
+@media screen and (min-width: 1023px) {
+  .section3__conteneur__img {
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
 }
 .section3__conteneur__img .section3__img {
-  margin-left: 40px;
+  margin-left: 15px;
   background-color: #fff;
-  width: 46%;
-  height: 100%;
+  margin-right: 15px;
   border-radius: 15px;
   margin-bottom: 30px;
   position: relative;
   cursor: pointer;
+}
+@media screen and (min-width: 1023px) {
+  .section3__conteneur__img .section3__img {
+    width: 47%;
+  }
 }
 .section3__conteneur__img .section3__img:hover {
   transform: scale(1.02);
@@ -172,6 +216,18 @@
 .img {
   object-fit: cover;
   border-radius: 15px 15px 0 0;
+  width: 100%;
+  height: 40vh;
+}
+@media screen and (min-width: 767px) {
+  .img {
+    height: 20vh;
+  }
+}
+@media screen and (min-width: 1023px) {
+  .img {
+    height: 30vh;
+  }
 }
 
 .liens {
@@ -198,14 +254,24 @@
   border-radius: 5px;
   position: absolute;
   right: 15px;
-  top: 20px;
+  top: 7px;
 }
 
 .section3__conteneur__img i {
   position: absolute;
   font-size: 35px;
   right: 20px;
-  top: 78%;
+  top: 84%;
+}
+@media screen and (min-width: 767px) {
+  .section3__conteneur__img i {
+    top: 75%;
+  }
+}
+@media screen and (min-width: 1023px) {
+  .section3__conteneur__img i {
+    top: 79%;
+  }
 }
 
 .section3__conteneur__img .fas {
@@ -228,8 +294,7 @@
 }
 
 .footer__Ohmyfood {
-  padding: 10px;
-  margin-left: 20px;
+  padding: 8px;
 }
 .footer__Ohmyfood .footer__sous-title {
   font-size: 17px;
@@ -296,8 +361,13 @@ header .navbar__Ohmyfood i {
 
 .img_menu1 {
   width: 100%;
-  height: 80vh;
+  height: 37vh;
   object-fit: cover;
+}
+@media screen and (min-width: 767px) {
+  .img_menu1 {
+    height: 70vh;
+  }
 }
 
 .Section1_Conteneur {
@@ -305,15 +375,14 @@ header .navbar__Ohmyfood i {
   position: relative;
   margin-top: -60px;
   border-radius: 35px 35px 0 0;
-  max-width: 95%;
-  margin-left: 35px;
 }
 .Section1_Conteneur .Title_Section_1 {
   display: flex;
   justify-content: space-between;
   flex-direction: row;
   align-items: center;
-  padding: 35px;
+  padding: 20px;
+  padding-top: 40px;
 }
 .Section1_Conteneur .Title_Section_1.Title_Section_1 h2 {
   font-size: 25px;
@@ -343,14 +412,12 @@ header .navbar__Ohmyfood i {
 
 .Section1_a_Conteneur {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
+  flex-direction: column;
 }
 .Section1_a_Conteneur .Listes_Section1 {
   display: flex;
   flex-direction: column;
-  width: 30%;
+  width: 97%;
   gap: 15px;
 }
 .Section1_a_Conteneur .Listes_Section1 .menu_plats {
@@ -359,13 +426,16 @@ header .navbar__Ohmyfood i {
   color: #000;
   border-bottom: solid 4px #99e2d0;
   width: 15%;
+  margin-left: 15px;
   margin-bottom: 10px;
+  margin-top: 30px;
 }
 
 .background_menu {
   background-color: #fff;
   padding: 20px 10px;
   border-radius: 15px 15px 15px 15px;
+  margin-left: 10px;
   cursor: pointer;
   opacity: 0.9;
   position: relative;
