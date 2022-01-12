@@ -20,14 +20,13 @@
 .section2__puces{
     display: flex;
     flex-direction: column;
-    margin-left: 35px;
+    margin-left: 20px;
     margin-right: 10px;
     gap: variables.$gap+20px;
     counter-reset: compteListe;
     list-style-type: none;
 
     @include responsives.tablet{
-        margin-right: 20px;
         gap: variables.$gap+10px;
     }
 
