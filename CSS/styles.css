@@ -520,6 +520,79 @@ header .navbar__Ohmyfood i {
     transform: rotate(360deg);
   }
 }
+.loader {
+  animation: loader 0.2s;
+  animation-delay: 2s;
+  animation-fill-mode: both;
+  align-items: center;
+  background-color: #F6F6F6;
+  opacity: 0.9;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10000;
+}
+.loader__item {
+  animation-iteration-count: 1;
+  animation: jump 1s;
+  border-radius: 40px;
+  height: 35px;
+  width: 35px;
+}
+.loader__itemContainer {
+  display: flex;
+  justify-content: space-between;
+  width: 200px;
+}
+.loader__item--1 {
+  background-color: violet;
+}
+.loader__item--2 {
+  animation-delay: 0.25s;
+  background-color: pink;
+}
+.loader__item--3 {
+  animation-delay: 0.5s;
+  background-color: #07a2b3;
+}
+
+@keyframes apparition {
+  0% {
+    transform: scale(0);
+    opacity: 0%;
+  }
+  50% {
+    opacity: 0%;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 100%;
+  }
+}
+@keyframes loader {
+  100% {
+    opacity: 0;
+    z-index: -10;
+  }
+}
+@keyframes jump {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(0.5rem);
+  }
+  75% {
+    transform: translateY(-0.5rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
 .background_menu strong {
   display: flex;
   justify-content: flex-end;
