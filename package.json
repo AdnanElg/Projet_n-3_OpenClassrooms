@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "sass": "sass --watch ./SASS/styles.scss ./CSS/styles.css",
-    "build": "postcss ./CSS/styles.css -o ./build/styles.min.css"
+    "build": "postcss ./CSS/styles.css -u autoprefixer cssnano -o ./build/styles.min.css"
   },
   "repository": {
     "type": "git",
@@ -19,6 +19,7 @@
   "homepage": "https://github.com/AdnanElg/Projet_n-3_openclassrooms#readme",
   "devDependencies": {
     "autoprefixer": "^10.4.2",
+    "cssnano": "^5.0.15",
     "postcss": "^8.4.5",
     "postcss-cli": "^9.1.0",
     "sass": "^1.45.2"
