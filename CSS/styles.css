@@ -463,21 +463,63 @@ header .navbar__Ohmyfood i {
 
 .background_menu {
   background-color: #fff;
-  padding: 20px 10px;
   border-radius: 15px 15px 15px 15px;
   margin-left: 10px;
   cursor: pointer;
   opacity: 0.9;
   position: relative;
+  display: flex;
   box-shadow: 0.5px 2.5px 10px #c9c9c9;
+}
+.background_menu .__detail {
+  width: 100%;
+  padding: 20px 10px;
+}
+.background_menu .__check {
+  display: none;
 }
 .background_menu:hover {
   transform: scale(1.02);
 }
-.background_menu:hoverh4 p {
-  font-size: 16px;
+.background_menu:hover .__detail {
+  width: 90%;
+}
+.background_menu:hover .__check {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20%;
+  background-color: #99e2d0;
+  position: relative;
+  animation-duration: 1s;
+  animation-name: slidein;
+  border-radius: 0 15px 15px 0;
+}
+.background_menu:hover .__check .fa-check-circle {
+  animation-duration: 1s;
+  animation-name: rotate;
+  color: white;
+  font-size: 30px;
+  border-radius: 50%;
 }
 
+@keyframes slidein {
+  from {
+    right: -4%;
+    opacity: 0%;
+  }
+  to {
+    right: 0%;
+  }
+}
+@keyframes rotate {
+  from {
+    transform: rotate(180deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 .background_menu strong {
   display: flex;
   justify-content: flex-end;

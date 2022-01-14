@@ -1,8 +1,8 @@
-@use "./utils/box-shadow";
-@use "./utils/zoom";
-@use "./utils/variables";
-@use "./utils/btn_ohmyfood";
-@use "./utils/responsives";
+@use "../utils/box-shadow";
+@use "../utils/zoom";
+@use "../utils/variables";
+@use "../components/btn_ohmyfood";
+@use "../utils/responsives";
 
 //Menu styles
 
@@ -158,26 +158,91 @@
 
 .background_menu{
     background-color: variables.$white-light;
-    padding: 20px 10px;
     border-radius: 15px 15px 15px 15px;
     margin-left: 10px;
     cursor: pointer;
     opacity: 0.9;
     position: relative;
+    display: flex;
+
+        
     @include box-shadow.Menu_box-shadow;
+
+    .__detail{
+        width: 100%;
+        padding: 20px 10px;
+    
+            
+    }
+
+    .__check{
+        display: none;
+    }
+
 
     &:hover{
         @include zoom.Section1_zoom;
     
 
-        &h4 p{
-            font-size: 16px;
+        .__detail{
+            width: 90%;
+            
+
+
+        }
+
+        .__check{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 20%;
+            background-color: #99e2d0;
+            position: relative;
+            animation-duration: 1s;
+            animation-name: slidein;
+            border-radius: 0 15px 15px 0;
+        
+            
+
+           .fa-check-circle{
+                animation-duration: 1s;
+                animation-name: rotate;
+                color: white;
+                font-size: 30px;
+                border-radius: 50%;
+            }
 
         }
 
     }
 
 }
+
+
+@keyframes slidein{
+    from{
+        right: -4%;
+        opacity: 0%;
+    }
+
+    to{
+        right: 0%;
+    }
+
+}
+
+
+@keyframes rotate {
+    from {
+        transform: rotate(180deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+
+}
+
 
 
 .background_menu strong{
@@ -193,7 +258,6 @@
     display: flex; 
     align-items: flex-end;
     justify-content: space-between;
-        
 }
 
 

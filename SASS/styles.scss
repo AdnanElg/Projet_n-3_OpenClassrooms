@@ -1,7 +1,7 @@
-@use "./base";
-@use "./header";
-@use "./section1";
-@use "./section2";
-@use "./section3";
-@use "./footer";
-@use "./Menu";
+@use "../SASS/base/base";
+@use "../SASS/layout/header";
+@use "../SASS/layout/section1";
+@use "../SASS/layout/section2";
+@use "../SASS/layout/section3";
+@use "../SASS/layout/footer";
+@use "../SASS/layout/Menu";
