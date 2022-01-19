@@ -1,0 +1,90 @@
+
+//Keyframes Loader
+
+@mixin loader {
+   @keyframes loader {
+    100% {
+        opacity: 0;
+        z-index: -10;
+    }
+  } 
+}
+
+  
+  
+@mixin jump {
+    @keyframes jump {
+    0% {
+        transform: translateY(0);
+    }
+    25% {
+        transform: translateY(0.5rem);
+    }
+    75% {
+        transform: translateY(-0.5rem);
+    }
+    100% {
+        transform: translateY(0);
+    }
+
+   }
+}  
+
+  
+
+//animation keyframes background menu
+
+@mixin apparition {
+   @keyframes apparition {
+    0% {
+      transform: scale(0);
+      opacity: 0%; 
+    }
+
+    50% {
+      opacity: 0%;
+    }
+
+    100%{
+       transform: scale(1);
+       opacity: 100%;
+    }
+
+   } 
+}
+
+
+
+
+@mixin slidein {
+   @keyframes slidein{
+    0%{
+        right: -4%;
+        }
+    
+    100%{
+
+        right: 0%;
+        }
+    
+    } 
+}
+
+    
+
+@mixin rotate {
+    @keyframes rotate {
+        0% {
+            transform: rotate(180deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+}
+  
+  
+  
+  
+  

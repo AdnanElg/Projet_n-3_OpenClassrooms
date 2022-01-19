@@ -363,12 +363,32 @@ template {
   width: 100%;
   z-index: 10000;
 }
+@keyframes loader {
+  100% {
+    opacity: 0;
+    z-index: -10;
+  }
+}
 .loader__item {
   animation-iteration-count: 1;
   animation: jump 1s;
   border-radius: 40px;
   height: 35px;
   width: 35px;
+}
+@keyframes jump {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(0.5rem);
+  }
+  75% {
+    transform: translateY(-0.5rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 .loader__itemContainer {
   display: flex;
@@ -387,26 +407,6 @@ template {
   background-color: #07a2b3;
 }
 
-@keyframes loader {
-  100% {
-    opacity: 0;
-    z-index: -10;
-  }
-}
-@keyframes jump {
-  0% {
-    transform: translateY(0);
-  }
-  25% {
-    transform: translateY(0.5rem);
-  }
-  75% {
-    transform: translateY(-0.5rem);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
 .navbar__Ohmyfood {
   position: relative;
   text-align: center;
@@ -874,6 +874,19 @@ header .navbar__Ohmyfood i {
   transform: scale(0);
   box-shadow: 0.5px 2.5px 10px #c9c9c9;
 }
+@keyframes apparition {
+  0% {
+    transform: scale(0);
+    opacity: 0%;
+  }
+  50% {
+    opacity: 0%;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 100%;
+  }
+}
 .background_menu .__detail {
   width: 100%;
   padding: 20px 10px;
@@ -903,6 +916,14 @@ header .navbar__Ohmyfood i {
   animation-name: slidein;
   border-radius: 0 15px 15px 0;
 }
+@keyframes slidein {
+  0% {
+    right: -4%;
+  }
+  100% {
+    right: 0%;
+  }
+}
 .background_menu:hover .__check .fa-check-circle {
   animation-duration: 1s;
   animation-name: rotate;
@@ -910,20 +931,15 @@ header .navbar__Ohmyfood i {
   font-size: 30px;
   border-radius: 50%;
 }
-
-@keyframes apparition {
+@keyframes rotate {
   0% {
-    transform: scale(0);
-    opacity: 0%;
-  }
-  50% {
-    opacity: 0%;
+    transform: rotate(180deg);
   }
   100% {
-    transform: scale(1);
-    opacity: 100%;
+    transform: rotate(360deg);
   }
 }
+
 .background_menu:nth-child(1) {
   animation-delay: 0s;
 }
@@ -964,22 +980,6 @@ header .navbar__Ohmyfood i {
   animation-delay: 4.5s;
 }
 
-@keyframes slidein {
-  0% {
-    right: -4%;
-  }
-  100% {
-    right: 0%;
-  }
-}
-@keyframes rotate {
-  0% {
-    transform: rotate(180deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
 .background_menu strong {
   display: flex;
   justify-content: flex-end;

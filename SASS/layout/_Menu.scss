@@ -3,6 +3,7 @@
 @use "../utils/variables";
 @use "../components/btn_ohmyfood";
 @use "../utils/responsives";
+@use "../utils/keyframes";
 
 
 //Menu styles
@@ -167,13 +168,14 @@
     position: relative;
     display: flex;
     width: 100%;
+    @include keyframes.apparition;
     animation: apparition .5s; 
     animation-timing-function: ease-in-out;
     animation-fill-mode: forwards;
     transform: scale(0);
     @include box-shadow.Menu_box-shadow;
-
     
+
     .__detail{
         width: 100%;
         padding: 20px 10px;
@@ -211,6 +213,7 @@
             width: 20%;
             background-color: #99e2d0;
             position: relative;
+            @include keyframes.slidein;
             animation-duration: 1s;
             animation-name: slidein;
             border-radius: 0 15px 15px 0;
@@ -219,6 +222,7 @@
             
 
            .fa-check-circle{
+                @include keyframes.rotate;
                 animation-duration: 1s;
                 animation-name: rotate;
                 color: white;
@@ -234,70 +238,37 @@
 
 
 
-//animation keyframes background menu
-
-
-@keyframes apparition {
-    0% {
-      transform: scale(0);
-      opacity: 0%; 
-    }
-
-    50% {
-      opacity: 0%;
-    }
-
-    100%{
-       transform: scale(1);
-       opacity: 100%;
-    }
-
+.background_menu:nth-child(1) { 
+    animation-delay: 0s; 
+} 
+.background_menu:nth-child(2) { 
+    animation-delay: 0.5s; 
+}
+.background_menu:nth-child(3) { 
+    animation-delay: 1s; 
+}
+.background_menu:nth-child(4) { 
+    animation-delay: 1.5s 
+}
+.background_menu:nth-child(5) { 
+    animation-delay: 2s; 
+}
+.background_menu:nth-child(6) { 
+    animation-delay: 2.5s; 
+}
+.background_menu:nth-child(7) { 
+    animation-delay: 3s 
+}
+.background_menu:nth-child(8) { 
+    animation-delay: 3.5s; 
+}
+.background_menu:nth-child(9) { 
+    animation-delay: 4s 
+}
+.background_menu:nth-child(10) { 
+    animation-delay: 4.5s; 
 }
 
-
-.background_menu:nth-child(1) { animation-delay: 0s; } 
-.background_menu:nth-child(2) { animation-delay: 0.5s; }
-.background_menu:nth-child(3) { animation-delay: 1s; }
-.background_menu:nth-child(4) { animation-delay: 1.5s }
-.background_menu:nth-child(5) { animation-delay: 2s; }
-.background_menu:nth-child(6) { animation-delay: 2.5s; }
-.background_menu:nth-child(7) { animation-delay: 3s }
-.background_menu:nth-child(8) { animation-delay: 3.5s; }
-.background_menu:nth-child(9) { animation-delay: 4s }
-.background_menu:nth-child(10) { animation-delay: 4.5s; }
-
-
-
-
-
-
-@keyframes slidein{
-    
-    0%{
-        right: -4%;
-        }
-    
-    100%{
-
-        right: 0%;
-        }
-    
-    }
-    
-
-
-@keyframes rotate {
-
-    0% {
-
-        transform: rotate(180deg);
-        }
-    
-    100% {
-
-        transform: rotate(360deg);
-        }
-    }
 
 
 
