@@ -4,6 +4,7 @@
 @use "../components/btn_ohmyfood";
 @use "../utils/responsives";
 
+
 //Menu styles
 
 //Header
@@ -18,8 +19,8 @@
         justify-content: center;
         align-items: center;
         font-size: variables.$size+5px;
-        left: 30px;
-        top: 32px;
+        left: 20px;
+        top: 50px;
         cursor: pointer;
   
     }
@@ -121,8 +122,9 @@
     .Listes_Section1{
         display: flex;
         flex-direction: column;
-        width: 97%;
+        width: 95%;
         gap: 15px;
+    
 
         @include responsives.Desktop{
             width: 30%;
@@ -155,25 +157,36 @@
 }
 
 
+//background menu animation
 
 .background_menu{
     background-color: variables.$white-light;
     border-radius: 15px 15px 15px 15px;
     margin-left: 10px;
     cursor: pointer;
-    opacity: 0.9;
     position: relative;
     display: flex;
-
-        
+    width: 100%;
+    animation: apparition .5s; 
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    transform: scale(0);
     @include box-shadow.Menu_box-shadow;
 
+    
     .__detail{
         width: 100%;
         padding: 20px 10px;
     
-            
     }
+
+
+    .__detail_text{
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
 
     .__check{
         display: none;
@@ -185,11 +198,11 @@
     
 
         .__detail{
-            width: 90%;
+            width: 80%;
             
 
-
         }
+
 
         .__check{
             display: flex;
@@ -201,6 +214,7 @@
             animation-duration: 1s;
             animation-name: slidein;
             border-radius: 0 15px 15px 0;
+           
         
             
 
@@ -219,112 +233,72 @@
 }
 
 
-@keyframes slidein{
-    from{
-        right: -4%;
-        opacity: 0%;
-    }
 
-    to{
-        right: 0%;
-    }
-
-}
-
-
-@keyframes rotate {
-    from {
-        transform: rotate(180deg);
-    }
-
-    to {
-        transform: rotate(360deg);
-    }
-
-}
-
-
-.loader {
-    animation: loader 0.2s;
-    animation-delay: 2s;
-    animation-fill-mode: both;
-    align-items:center;
-    background-color: variables.$white;
-    opacity: 0.9;
-    display:flex;
-    height: 100%;
-    justify-content:center;
-    left: 0;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 10000;
-      
-    &__item {
-        animation-iteration-count: 1;
-        animation: jump 1s;
-        border-radius: 40px;
-        height: 35px;
-        width: 35px;
-    
-        &Container {
-          display: flex;
-          justify-content: space-between;
-          width: 200px;
-        }
-    
-        &--1 {
-          background-color: violet;
-        }
-    
-        &--2 {
-          animation-delay: 0.25s;
-          background-color: pink;
-        }
-    
-        &--3 {
-          animation-delay: 0.5s;
-          background-color: rgb(7, 162, 179);
-        }
-    }
-}
+//animation keyframes background menu
 
 
 @keyframes apparition {
     0% {
       transform: scale(0);
-      opacity: 0%;
+      opacity: 0%; 
     }
+
     50% {
       opacity: 0%;
     }
-    100% {
-      transform: scale(1);
-      opacity: 100%;
+
+    100%{
+       transform: scale(1);
+       opacity: 100%;
     }
+
 }
 
-  @keyframes loader {
-    100% {
-      opacity: 0;
-      z-index: -10;
-    }
-}
 
-  @keyframes jump {
+.background_menu:nth-child(1) { animation-delay: 0s; } 
+.background_menu:nth-child(2) { animation-delay: 0.5s; }
+.background_menu:nth-child(3) { animation-delay: 1s; }
+.background_menu:nth-child(4) { animation-delay: 1.5s }
+.background_menu:nth-child(5) { animation-delay: 2s; }
+.background_menu:nth-child(6) { animation-delay: 2.5s; }
+.background_menu:nth-child(7) { animation-delay: 3s }
+.background_menu:nth-child(8) { animation-delay: 3.5s; }
+.background_menu:nth-child(9) { animation-delay: 4s }
+.background_menu:nth-child(10) { animation-delay: 4.5s; }
+
+
+
+
+
+
+@keyframes slidein{
+    
+    0%{
+        right: -4%;
+        }
+    
+    100%{
+
+        right: 0%;
+        }
+    
+    }
+    
+
+
+@keyframes rotate {
+
     0% {
-      transform: translateY(0);
-    }
-    25% {
-      transform: translateY(0.5rem);
-    }
-    75% {
-      transform: translateY(-0.5rem);
-    }
+
+        transform: rotate(180deg);
+        }
+    
     100% {
-      transform: translateY(0);
+
+        transform: rotate(360deg);
+        }
     }
-}
+
 
 
 
@@ -342,6 +316,8 @@
     align-items: flex-end;
     justify-content: space-between;
 }
+
+
 
 
 //Boutton Commander
@@ -366,3 +342,5 @@
     }
 
 }
+
+
