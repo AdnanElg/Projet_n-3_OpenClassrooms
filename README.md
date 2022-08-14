@@ -32,12 +32,12 @@ Projet 3 du parcours Développeur web d'OpenClassrooms : Dynamiser un site web a
 - Interdites : JavaScript, inline CSS
 - Identité graphique
 
-Polices :
+.Polices :
 
 - Logo et titres : Shrikhand
 - Texte : Roboto
 
-Couleurs :
+.Couleurs :
 
 - Primaire: #9356DC
 - Secondaire: #FF79DA
